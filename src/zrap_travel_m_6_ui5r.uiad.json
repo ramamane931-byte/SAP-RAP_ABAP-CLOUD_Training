@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Travel Processor App",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Travel App M 6"
+  },
+  "ui5AppDetails": {
+    "appId": "travelprocessapp.project2travel"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B90847D212314ECCD39D3D525F46FB7020CCE459_TM",
+    "semanticObject": "ZRAP_TRAVEL_M_6",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B90847D212314ECCD39D3D525F46FB7020CCE459_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Travel App M 6"
+      }
+    }
+  ]
+}
