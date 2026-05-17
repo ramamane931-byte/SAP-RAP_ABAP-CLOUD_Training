@@ -1,7 +1,7 @@
 @AccessControl.authorizationCheck: #MANDATORY
 @Metadata.allowExtensions: true
 @ObjectModel.sapObjectNodeType.name: 'ZTBL_TRAVEL_M_01'
-@EndUserText.label: '###GENERATED Core Data Service Entity'
+@EndUserText.label: '###GENERATED WIZARD CDS Entity'
 define root view entity ZR_TBL_TRAVEL_M_01
   as select from ztbl_travel_m_01
 {
