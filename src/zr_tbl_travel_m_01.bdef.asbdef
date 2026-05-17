@@ -1,0 +1,55 @@
+managed implementation in class ZBP_R_TBL_TRAVEL_M_01 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBL_TRAVEL_M_01 alias ZrTblTravelM01
+persistent table ZTBL_TRAVEL_M_01
+extensible
+draft table ZTBL_TRVL_M_01_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   TravelUUID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( numbering : managed )
+   TravelUUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTBL_TRAVEL_M_01 corresponding extensible
+  {
+    TravelUUID = TRAVEL_UUID;
+    TravelID = TRAVEL_ID;
+    AgencyID = AGENCY_ID;
+    CustomerID = CUSTOMER_ID;
+    BeginDate = BEGIN_DATE;
+    EndDate = END_DATE;
+    BookingFee = BOOKING_FEE;
+    TotalPrice = TOTAL_PRICE;
+    CurrencyCode = CURRENCY_CODE;
+    Description = DESCRIPTION;
+    OverallStatus = OVERALL_STATUS;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}
